@@ -1,0 +1,217 @@
+/* Color Variables */
+:root {
+  --primary-bg: #121212;
+  --secondary-bg: #121212;
+  --tertiary-bg: #121212;
+  --accent-bg: #252525;
+  --code-bg: #2c2c2c;
+  --button-bg: #333;
+  --button-hover: #444;
+  --border-color: #333;
+  --border-accent: #555;
+  --text-primary: #ffffff;
+  --link-color: #90caf9;
+  --get-method: #42a5f5;
+  --post-method: #66bb6a;
+}
+
+/* General text and background */
+body,
+.swagger-ui,
+.swagger-ui .wrapper {
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
+}
+
+.swagger-ui * {
+  color: var(--text-primary) !important;
+}
+
+/* Topbar */
+.swagger-ui .topbar {
+  background-color: var(--tertiary-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.swagger-ui .topbar a,
+.swagger-ui .topbar .version-stamp {
+  color: var(--text-primary);
+}
+
+.swagger-ui .topbar .version-stamp {
+  background-color: var(--accent-bg);
+}
+
+/* Info section */
+.swagger-ui .info,
+.swagger-ui .servers,
+.swagger-ui .auth-wrapper,
+.swagger-ui .modal-ux,
+.swagger-ui .modal-ux-content,
+.swagger-ui .modal-ux-content .auth-btn-wrapper,
+.swagger-ui .opblock,
+.swagger-ui .scheme-container {
+  background-color: var(--secondary-bg);
+}
+
+.swagger-ui .info .title,
+.swagger-ui .info a,
+.swagger-ui .servers-title {
+  color: var(--text-primary);
+}
+
+.swagger-ui .info a {
+  color: var(--link-color);
+}
+
+/* Select dropdowns */
+.swagger-ui select,
+.swagger-ui select option,
+.swagger-ui .servers select,
+.swagger-ui .modal-ux-content input[type="text"],
+.swagger-ui .modal-ux-content input[type="password"],
+.swagger-ui .parameters-col_description input {
+  background-color: var(--button-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-accent);
+}
+
+/* Buttons */
+.swagger-ui .btn,
+.swagger-ui .authorization__btn,
+.swagger-ui .modal-ux-content .btn {
+  background-color: var(--button-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-accent);
+}
+
+.swagger-ui .btn:hover,
+.swagger-ui .authorization__btn:hover,
+.swagger-ui .modal-ux-content .btn:hover {
+  background-color: var(--button-hover);
+}
+
+/* Modal header */
+.swagger-ui .modal-ux-header {
+  background-color: var(--tertiary-bg);
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.swagger-ui .modal-ux-header h3,
+.swagger-ui .modal-ux-content label,
+.swagger-ui .modal-ux-content .close-modal {
+  color: var(--text-primary);
+}
+
+/* Opblock */
+.swagger-ui .opblock,
+.swagger-ui .opblock-summary {
+  border: 1px solid var(--border-color);
+}
+
+.swagger-ui .opblock-summary {
+  background-color: var(--accent-bg);
+}
+
+.swagger-ui .opblock-tag,
+.swagger-ui .opblock-summary-path,
+.swagger-ui .opblock-summary-description {
+  color: var(--text-primary) !important;
+}
+
+.swagger-ui .opblock-tag {
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--secondary-bg);
+}
+
+/* HTTP Methods */
+.swagger-ui .opblock-get {
+  border-left: 5px solid var(--get-method);
+  background-color: var(--secondary-bg);
+}
+
+.swagger-ui .opblock-post {
+  border-left: 5px solid var(--post-method);
+  background-color: var(--secondary-bg);
+}
+
+/* Table styles */
+.swagger-ui .table-container table thead tr th {
+  background-color: var(--code-bg);
+  color: var(--text-primary);
+}
+
+.swagger-ui .table-container table tbody tr td {
+  color: var(--text-primary);
+}
+
+/* Sections */
+.swagger-ui .opblock-section-header {
+  background-color: var(--code-bg);
+  color: var(--text-primary);
+}
+
+/* Code blocks */
+.swagger-ui .highlight-code,
+.swagger-ui .markdown code {
+  background-color: var(--code-bg);
+  color: var(--text-primary);
+}
+
+/* Customizations */
+.swagger-ui .opblock .opblock-section-header {
+  background: transparent;
+}
+
+.swagger-ui .auth-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  gap: 10px;
+}
+
+/* Hide Swagger logo */
+.topbar {
+  display: none;
+}
+
+/* Input exception */
+.swagger-ui .parameters-col_description input {
+  color: white !important;
+}
+
+/* Title gradient */
+.title {
+  background: linear-gradient(180deg, red, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Yolnoma Pixel Bold" !important;
+}
+
+/* Hide Swagger version in title */
+.title span {
+  display: none;
+}
+
+/* Commented out: try-out button style */
+/*
+.try-out .btn {
+    background-color: lime;
+    color: black !important;
+}
+*/
+
+/* Commented out: contact info */
+/*
+.info__contact {
+    div {
+        display: none;
+    }
+}
+*/
+
+/* Textarea custom */
+.swagger-ui textarea {
+  background-color: #66BB6F;
+}
