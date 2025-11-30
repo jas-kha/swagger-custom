@@ -1,11 +1,25 @@
 {
   "name": "swagger-custom",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "author": "jas-kha",
+  "contributors": [
+    {
+      "name": "Jasurbek Haydarov",
+      "url": "https://github.com/jas-kha"
+    }
+  ],
+  "license": "MIT",
   "type": "commonjs",
   "main": "dist/index.cjs",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.cjs"
+    }
+  },
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "repository": {
     "type": "git",
@@ -30,16 +44,27 @@
     "swagger",
     "swagger-ui",
     "swagger-custom",
+    "swagger-theme",
     "dark-swagger",
     "neon-swagger",
+    "swagger-style",
+    "swagger-js",
     "custom-css",
     "custom-js",
-    "swagger-styling",
-    "express-middleware"
+    "express-middleware",
+    "api-docs"
   ],
-  "license": "MIT",
   "scripts": {
-    "build": "rollup -c",
+    "build": "npx rollup -c",
     "prepublishOnly": "npm run build"
-  }
+  },
+  "engines": {
+    "node": ">=20",
+    "npm": ">=10"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/jas-kha"
+  },
+  "sideEffects": false
 }

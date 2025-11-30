@@ -1,70 +1,49 @@
-## Swagger Custom Style and Dynamic js components
+<h2 align="center">
+  <img src="https://i.ibb.co/Gv18M2wX/c326f819-3494-423c-bc0c-3e26fec47926.png" width="400">
+</h2>
 
-npm install `swagger-custom`
-
-### Images
-
-<img src=".github/image.png" alt="image: swagger-custom"> 
-
-| Image | Image |
-|----|----------|
-|<img src=".github/image2.png" alt="image: swagger-custom"> |<img src=".github/image1.png" alt="image: swagger-custom">|
-
-## Installation 
+## Installation
 
 | Package Manager | Command |
 |----------------|---------|
 | **npm**        | `npm install swagger-custom` |
 |                |                              |
-| **yarn**       | `yarn add swagger-custom`    |
-|                |                              |
 | **bun**        | `bun install swagger-custom` |
 
+## Screenshots
 
-### Use `swagger-custom`
+<img src="https://i.ibb.co/7dmJqrvs/image.png" alt="image: swagger-custom" width="400">
 
-```js
-const express = require('express');
-const swaggerUi = require('swagger-ui-express');
-const swaggerCustom = require('swagger-custom');
-// Swagger document
-const swaggerDocument = require('./swagger/swagger.json');
+<img src="https://i.ibb.co/m5ngxkxD/image2.png" alt="image: swagger-custom">
 
-const app = express();
+## Use
 
-// Init swagger-custom
-const custom = swaggerCustom();
+This documentation provides two integration methods for using **swagger-custom** with Swagger UI:
 
-// Serve swagger-custom assets
-app.use('/swagger-custom', custom.router);
+* **Method 1:** Integrating via `swagger.json`
+* **Method 2:** Integrating via a JavaScript-based Swagger config (`swagger/index.js`)
 
-// Swagger UI
-app.use(
-  '/api-docs',
-  swaggerUi.serve,
-  swaggerUi.setup(swaggerDocument, {
-    customCssUrl: custom.options.customCssUrl,
-    customJs: custom.options.customJs,
-    customSiteTitle: 'My Custom API Docs',
-  })
-);
+Both methods are fully explained below.
 
-// Run server
-app.listen(3000, () => {
-  console.log('API Docs → http://localhost:3000/api-docs');
-});
-```
+---
 
-```js
------------------------------------------------
- * Swagger Custom Package
- * Author: Jasur Haydarov (jas-kha)
- * Description: Custom CSS & JS injector for 
- * Swagger UI with optimized minified output.
- * Build: Auto-generated using Rollup.
- * GitHub: https://github.com/jas-kha/swagger-custom
- * Copyright(c) 2025 JH.
- * Copyright(c) 2025-2026 Jasurbek Haydarov Baxtiyorovich
- * MIT Licensed
------------------------------------------------
-```
+## 📄 Available Documents
+
+* [index.md](./docs/index.md)
+* [Method 1 – JSON swagger Integration](./docs/1-json-method.md)
+* [Method 2 – JS swagger Integration](./docs/2-js-method.md)
+#### best practise modularization 
+* [loader/swagger.js](./docs/3-loaderjs-method.md)
+---
+
+# Summary
+
+| File                 | Description                                  |
+| -------------------- | -------------------------------------------- |
+| **README.md**        | Main overview and links to both methods      |
+| **index.md**         | Explanation of when to use JSON or JS method |
+| **1-json-method.md** | Method 1 (swagger.json) complete guide       |
+| **2-js-method.md**   | Method 2 (swagger/index.js) complete guide   |
+| **docs folder**      | Contains all documentation files             |
+
+You can now copy each section into separate `.md` files inside your `docs/` directory.
