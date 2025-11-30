@@ -2,11 +2,12 @@ const copy = require('rollup-plugin-copy');
 const { terser: rollupTerser } = require('rollup-plugin-terser');
 const csso = require('csso');
 const { minify: terserMinify } = require('terser');
+const { version } = require('./package.json');
 
 const fileHeader = `
 /*!
 ==========================================================
-* Swagger Custom Package v1.0.6
+* Swagger Custom Package v${version}
 * Author: Jasurbek Haydarov (jas-kha)
 * GitHub: https://github.com/jas-kha/swagger-custom
 * Documentation: https://github.com/jas-kha/swagger-custom#readme
