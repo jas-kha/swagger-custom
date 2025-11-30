@@ -12,7 +12,7 @@
 
 ## Screenshots
 
-<img src="https://i.ibb.co/7dmJqrvs/image.png" alt="image: swagger-custom" width="400">
+<img src="https://i.ibb.co/7dmJqrvs/image.png" alt="image: swagger-custom">
 
 <img src="https://i.ibb.co/m5ngxkxD/image2.png" alt="image: swagger-custom">
 
